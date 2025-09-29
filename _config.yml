@@ -1,3 +1,101 @@
-theme: jekyll-theme-cayman
-title: 你的站点标题
-description: 一句话简介
+title: 你的中文名 / English Name
+name: 你的中文名 / English Name
+description: 研究方向一句话简介（例如：NLP、Multimodal、Robotics）
+url: https://你的用户名.github.io
+baseurl: ""   # 用户主页仓库留空；若是项目页需写 /repo-name
+
+# 使用 Minimal Mistakes 主题（GitHub Pages 兼容）
+remote_theme: "mmistakes/minimal-mistakes"
+
+# 显示设置
+locale: zh-CN
+markdown: kramdown
+highlighter: rouge
+
+# 插件（GitHub Pages 支持）
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+
+# 导航（用 _data/navigation.yml 控制）
+include: ["_pages"]
+
+# 作者信息（主页侧边栏用）
+author:
+  name: 你的名字
+  avatar: /assets/img/avatar.jpg
+  bio: >
+    你的简介。可包含研究方向、目前职位/学校、实验室等。
+  location: 城市, 国家
+  links:
+    - label: Email
+      icon: fas fa-envelope
+      url: mailto:you@example.com
+    - label: GitHub
+      icon: fab fa-github
+      url: https://github.com/你的用户名
+    - label: Google Scholar
+      icon: fas fa-graduation-cap
+      url: https://scholar.google.com/citations?user=XXXX
+    - label: ORCID
+      icon: fas fa-link
+      url: https://orcid.org/你的ID
+
+# 站点结构：自定义集合（Collections）
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# 默认布局（根据页面类型自动套用样式）
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+      toc: true
+      toc_sticky: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: "teaching"
+    values:
+      layout: single
+      author_profile: true
+
+# 归档（News 用）
+jekyll-archives:
+  enabled:
+    - categories
+    - year
+  layouts:
+    year: archive
+    category: archive
+  permalinks:
+    year: '/news/:year/'
+    category: '/news/category/:name/'
+
+# 主题皮肤与样式
+minimal_mistakes_skin: "air"  # 可选: default, air, contrast, dark 等
