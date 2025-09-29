@@ -1,16 +1,35 @@
-<!doctype html>
-<html lang="zh-CN">
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>我的主页</title>
-<style>
-  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; max-width: 760px; margin: 40px auto; padding: 0 16px; }
-  h1 { margin-top: 0; }
-  a { text-decoration: none; }
-</style>
-<body>
-  <h1>你好，我是XXX</h1>
-  <p>这里是我的个人网站，用 GitHub Pages 搭建。</p>
-  <p><a href="https://github.com/你的用户名">GitHub</a> · <a href="mailto:you@example.com">Email</a></p>
-</body>
-</html>
+---
+layout: splash
+title: "你的名字（English Name）"
+permalink: /
+author_profile: true
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.2"
+  overlay_image: /assets/img/hero.jpg
+  actions:
+    - label: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=XXXX"
+    - label: "CV (PDF)"
+      url: "/assets/pdf/cv.pdf"
+excerpt: >
+  这里一段简洁的介绍：你是谁、在哪儿、研究方向、最近关注的问题。
+feature_row:
+  - title: "Publications"
+    excerpt: "论文列表与下载链接。"
+    url: "/publications/"
+    btn_class: "btn--primary"
+    btn_label: "View"
+  - title: "Research"
+    excerpt: "研究主题与项目。"
+    url: "/research/"
+    btn_class: "btn--primary"
+    btn_label: "View"
+  - title: "Teaching"
+    excerpt: "教授/助教过的课程与材料。"
+    url: "/teaching/"
+    btn_class: "btn--primary"
+    btn_label: "View"
+---
+
+{% include feature_row id="feature_row" %}
